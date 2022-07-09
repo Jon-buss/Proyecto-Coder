@@ -1,0 +1,142 @@
+body {
+    background-image: url(https://1.bp.blogspot.com/-ZdgZaGj8xZ4/WNhTWP2CR8I/AAAAAAAACy8/THgLeEMKmgAxdzkPCqa2aowDwiiWPWplACLcB/s1600/viaticos.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 30% 40%;
+    background-position: left;
+}
+
+h1 {
+    font: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+h2 {
+    font: sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 800px;
+    padding: 1em;
+    border: 2px solid rgb(9, 1, 1);
+    border-radius: 1em;
+}
+
+div {
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li+li {
+    margin-top: 0.5em;
+}
+
+label {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+}
+
+select {
+    font: 1em;
+    width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+}
+
+input,
+textarea {
+    font: 1em;
+    width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.botonLiquidar {
+    padding-right: 15px;
+    margin-right: 5em;
+}
+
+button {
+    margin-left: 45em;
+}
+
+table {
+    vertical-align: center;
+    margin-right: 11em;
+    margin-left: 13em;
+}
+
+#gasto1,
+#gasto2,
+#gasto3,
+#gasto4 {
+    width: 100px;
+    text-align: right;
+}
+
+#valueInput {
+    margin-right: 6em;
+    font-weight: bold;
+    font-size: 18px
+}
+
+#firmaAgente {
+    width: 50%;
+    float: left;
+}
+
+#firmaAutorizante {
+    width: 50%;
+    float: right;
+}
+
+#gastos {
+    margin-left: 17em;
+}
+
+#pasajes{
+    width: 50px;
+    margin-right: 20em;
+    vertical-align: center;
+}
+
+#facturaHotel{
+    width: 50px;
+    margin-right: 20em;
+    vertical-align: center;
+}
+
+#ticketTraslados{
+    width: 50px;
+    margin-right: 20em;
+    vertical-align: center;
+}
+
+#ticketGastos{
+    width: 50px;
+    margin-right: 20em;
+    vertical-align: center;
+}
+
+#email {
+    display: inline-block;
+}
+
+#correo {
+   margin-left:0.3em
+}

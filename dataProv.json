@@ -1,0 +1,8 @@
+[
+    {"region":"noroeste","valor":4510, "provincia":["JUJUY", "SALTA", "TUCUMAN", "CATAMARCA", "LA RIOJA"]},
+    {"region":"noreste","valor":3154, "provincia":["MISIONES", "CORRIENTES", "ENTRE RIOS", "FORMOSA", "CHACO"]},
+    {"region":"cuyo","valor":4510, "provincia":["SAN JUAN", "MENDOZA", "SAN LUIS"]},
+    {"region":"centro","valor":3765, "provincia":["CORDOBA", "SANTIAGO DEL ESTERO", "SANTA FE", "LA PAMPA"]},
+    {"region":"sur","valor":5523, "provincia":["NEUQUEN", "RIO NEGRO", "CHUBUT", "SANTA CRUZ", "TIERRA DEL FUEGO"]},
+    {"region":"metropolitana","valor":3154, "provincia":["BUENOS AIRES", "CABA"]}
+]

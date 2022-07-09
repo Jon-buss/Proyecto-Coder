@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Sistema de Liquidación de Viáticos del Ministerio del Interior, Obras Públicas y Vivienda</title>
+    <link rel="stylesheet" href="styles/Clase.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src='./scripts/form.js' type="module"></script>
+</head>
+
+<body>
+    <form id="formulario">
+        <h1> <img src="./assets/encabezado.jpg" alt="Descripción de la imagen">
+            <p>FORMULARIO DE LIQUIDACION DE VIATICOS</p>
+        </h1>
+        <ul>
+            <section>
+                <h2></h2>
+                <p>
+                    <li>
+                        <label for="username">Nombre y Apellido del Agente:</label>
+                        <input type="text" id="username" name="username" placeholder="Escribe tu nombre y apellido" required/>
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <label for="fechaSalida">Fecha de salida:</label>
+                        <input type="datetime-local" id="fechaSalida" name="fechaSalida" required/>
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <label for="lugarSalida">Lugar de salida:</label>
+                        <select id="lugarSalida" name="lugarSalida">
+                            <option value="Aeroparque">Aeroparque Internacional Jorge Newbery</option>
+                            <option value="Aeropuerto">Aeropuerto Internacional de Ezeiza</option>
+                        </select>
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <label for="fechaRegreso">Fecha de regreso:</label>
+                        <input type="datetime-local" id="fechaRegreso" name="fechaRegreso" required/>
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <label for="lugarRegreso">Lugar de regreso:</label>
+                        <select id="lugarRegreso" name="lugarRegreso">
+                            <option value="Aeroparque">Aeroparque Internacional Jorge Newbery</option>
+                            <option value="Aeropuerto">Aeropuerto Internacional de Ezeiza</option>
+                        </select>
+                    </li>
+                </p>
+                <p> 
+                    <div id="email"></div>
+                </p>
+            </section>
+
+            <section>
+                <h2> DETALLES DEL TRASLADO (al lugar de destino):</h2>
+                <p></p>
+                <p>
+                    <li>
+                        <label for="provinciaComision">Lugar donde realiza la diligencia:</label>
+                        <input type="text" id="provinciaComision" name="provinciaComision" title="Provincia o CABA"
+                            placeholder="Escriba la provincia" required/>
+                    </li>
+                </p>
+                <p>
+                    <li>
+                        <label for="motivoComision">
+                            <span>Motivo de la comisión de servicio:</span>
+                        </label>
+                        <select id="motivoComision" name="motivoComision">
+                            <option value="Inspección">INSPECCION de Obras</option>
+                            <option value="Reunión">CONVENCION o junta de trabajo</option>
+                            <option value="Acto">ACTO POLITICO</option>
+                            <option value="Acto">INAUGURACION de Obras</option>
+                            <option value="Otro">Otro motivo</option>
+                        </select>
+                        <p></p>
+                        <div id="otroMotivo"></div>
+                    </li>
+                </p>
+            </section>
+
+            <section>
+                <h2> GASTOS DE TRASLADO (dentro del lugar de destino):</h2>
+                <p>
+                <table id="gastos">
+                    <tr>
+                        <th scope="col">Detalle</th>
+                        <th scope="col">Monto</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">Aeropuerto - Hotel</td>
+                        <td>
+                            <input id="gasto1" type="number" step="0.01" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">Hotel - Lugar de reunión</td>
+                        <td>
+                            <input id="gasto2" type="number" step="0.01" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">Lugar de reunión - Hotel</td>
+                        <td>
+                            <input id="gasto3" type="number" step="0.01" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">Hotel - Aeropuerto</td>
+                        <td>
+                            <input id="gasto4" type="number" step="0.01" />
+                        </td>
+                    </tr>
+                </table>
+                </p>
+            </section>
+
+            <section>
+                <li>
+                    <p>
+                        <button id="MontoTotal" type="button">Total a pagar</button>
+                    <div id="valueInput"></div>
+                    </p>
+                </li>
+            </section>
+
+            <section>
+                <h2> DOCUMENTACIÓN ADJUNTA AL PRESENTE:</h2>
+                <div id="doc">
+                    <p>
+                        <li>
+                            <label for="pasajes">Pasajes (boarding pass):</label>
+                            <input type="checkbox" id="pasajes" name="pasajes" />
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <label for="facturaHotel">Comprobante de alojamiento (factura):</label>
+                            <input type="checkbox" id="facturaHotel" name="facturaHotel" />
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <label for="ticketGastos">Tickets de gastos en comidas:</label>
+                            <input type="checkbox" id="ticketGastos" name="ticketGastos" />
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <label for="ticketTraslados">Comprobantes de traslados (tickets):</label>
+                            <input type="checkbox" id="ticketTraslados" name="ticketTraslados" />
+                        </li>
+                    </p>
+                </div>
+            </section>
+<br>
+            <section>
+                <li>
+                    <p>
+                        <label for="msg"> Observaciones:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </p>
+                </li>
+            </section>
+            <br><br><br><br>
+            <section>
+                <li>
+                    <p>
+                    <div id="firmaAgente">
+                        <center>
+                            . . . . . . . . . . . . . . . . . . <br>
+                            Firma y sello AGENTE
+                        </center>
+                    </div>
+
+                    <div id="firmaAutorizante">
+                        <center>
+                            . . . . . . . . . . . . . . . . . . <br>
+                            Firma y sello AUTORIZANTE
+                        </center>
+                    </div>
+                    </p>
+                </li>
+            </section>
+            <br><br><br>
+            <section>
+                <li id="botonLiquidar" class="button"> </li>
+            </section>
+        </ul>
+    </form>
+</body>
+
+</html>

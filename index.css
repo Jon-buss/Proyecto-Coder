@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Indie+Flower&display=swap');
+
+form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 12em;
+    text-align: center;
+
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+body {
+    background-image: url(https://i1.wp.com/www.sopitas.com/wp-content/uploads/2016/02/vi%C3%A1ticos.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position: center;
+    background-color: grey;
+}
+
+button {
+    margin: 0 auto;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 2em;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(247, 231, 231, 0);
+}
